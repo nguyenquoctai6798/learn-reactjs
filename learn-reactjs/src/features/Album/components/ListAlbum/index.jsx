@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Album from "../Album";
+import "./styles.scss";
 
 ListAlbum.propTypes = {
     listAlbum: PropTypes.array

@@ -1,0 +1,12 @@
+.album {
+  &__thumbnail {
+    img {
+      width: 190px;
+      border-radius: 5px;
+    }
+  }
+  &__title {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
