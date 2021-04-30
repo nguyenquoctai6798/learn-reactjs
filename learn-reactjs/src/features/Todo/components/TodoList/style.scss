@@ -1,0 +1,12 @@
+.todo-list {
+  li {
+    font-size: 18px;
+    list-style: none;
+    cursor: pointer;
+    &.success {
+      color: green;
+      text-decoration: line-through;
+      font-style: italic;
+    }
+  }
+}
