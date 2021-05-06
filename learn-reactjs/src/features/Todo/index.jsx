@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import TodoList from "./components/TodoList";
 import {useLocation, useHistory, useRouteMatch} from "react-router-dom";
 import queryString from "query-string"
+import InputForm from "../../components/form-controls/InputForm";
+import TodoForm from "./components/TodoForm";
 // const queryString = require("query-string")
 TodoFeature.propTypes = {};
 
@@ -63,12 +65,15 @@ function TodoFeature(props) {
             search: queryString.stringify(queryParams)
         })
     }
+
     useEffect(() => {
         const params = queryString.parse(location.search)
         setFiter(params.status ? params.status : "all")
     }, [location.search])
     return (
         <div>
+            <h3>Todo something</h3>
+            <TodoForm/>
             <h3>My todo</h3>
             <TodoList listTodo={listTodoFilter} onTodoClick={(index) => handleTodoClick(index)}/>
             <button onClick={handleFilterAll}>Filter All</button>
